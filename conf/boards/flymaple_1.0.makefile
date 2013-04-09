@@ -25,7 +25,7 @@ endif
 
 ifndef NO_LUFTBOOT
 $(TARGET).CFLAGS+=-DLUFTBOOT
-$(TARGET).LDSCRIPT = $(SRC_ARCH)/lisa_m_2.0_luftboot.ld
+$(TARGET).LDSCRIPT = $(SRC_ARCH)/flymaple.ld
 endif
 
 #
@@ -39,7 +39,7 @@ endif
 # default LED configuration
 #
 ifndef RADIO_CONTROL_LED
-RADIO_CONTROL_LED  = 4
+RADIO_CONTROL_LED = 1
 endif
 
 ifndef BARO_LED
@@ -47,15 +47,15 @@ BARO_LED = none
 endif
 
 ifndef AHRS_ALIGNER_LED
-AHRS_ALIGNER_LED = 2
+AHRS_ALIGNER_LED = none
 endif
 
 ifndef GPS_LED
-GPS_LED = 3
+GPS_LED = none
 endif
 
 ifndef SYS_TIME_LED
-SYS_TIME_LED = 1
+SYS_TIME_LED = none
 endif
 
 #
