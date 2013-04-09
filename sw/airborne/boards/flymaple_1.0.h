@@ -9,13 +9,13 @@
  * Onboard LEDs
  */
 
-/* red, on PA8 *
+/* red, on PA8 */
 #ifndef USE_LED_1
 #define USE_LED_1 1
 #endif
 #define LED_1_GPIO GPIOA
 #define LED_1_GPIO_CLK RCC_APB2Periph_GPIOA
-#define LED_1_GPIO_PIN GPIO_Pin_8
+#define LED_1_GPIO_PIN GPIO_Pin_5
 #define LED_1_AFIO_REMAP ((void)0)
 
 /* green, shared with JTAG_TRST *
@@ -27,7 +27,7 @@
 #define LED_2_GPIO_PIN GPIO_Pin_4
 #define LED_2_AFIO_REMAP GPIO_PinRemapConfig(GPIO_Remap_SWJ_NoJTRST, ENABLE)
 
-/* green, shared with ADC12 (ADC_6 on connector ANALOG2) *
+* green, shared with ADC12 (ADC_6 on connector ANALOG2) *
 #ifndef USE_LED_3
 #define USE_LED_3 1
 #endif
@@ -36,7 +36,7 @@
 #define LED_3_GPIO_PIN GPIO_Pin_2
 #define LED_3_AFIO_REMAP ((void)0)
 
-/* red, shared with ADC15 (ADC_4 on connector ANALOG2) *
+* red, shared with ADC15 (ADC_4 on connector ANALOG2) *
 #ifndef USE_LED_4
 #define USE_LED_4 1
 #endif
@@ -45,7 +45,7 @@
 #define LED_4_GPIO_PIN GPIO_Pin_5
 #define LED_4_AFIO_REMAP ((void)0)
 
-/* green, on PC15 *
+* green, on PC15 *
 #ifndef USE_LED_5
 #define USE_LED_5 1
 #endif
@@ -54,7 +54,7 @@
 #define LED_5_GPIO_PIN GPIO_Pin_15
 #define LED_5_AFIO_REMAP ((void)0)
 
-/*
+*
  * LEDs not populated by default
  */
 /* PC0, ADC10 on ADC_1 *
@@ -63,20 +63,20 @@
 #define LED_7_GPIO_PIN GPIO_Pin_0
 #define LED_7_AFIO_REMAP ((void)0)
 
-/* PC1, ADC11 on ADC_2 *
+* PC1, ADC11 on ADC_2 *
 #define LED_8_GPIO GPIOC
 #define LED_8_GPIO_CLK RCC_APB2Periph_GPIOC
 #define LED_8_GPIO_PIN GPIO_Pin_1
 #define LED_8_AFIO_REMAP ((void)0)
 
-/* PC3, ADC13 on ADC_3 *
+* PC3, ADC13 on ADC_3 *
 #define LED_6_GPIO GPIOC
 #define LED_6_GPIO_CLK RCC_APB2Periph_GPIOC
 #define LED_6_GPIO_PIN GPIO_Pin_3
 #define LED_6_AFIO_REMAP ((void)0)
 
 
-/*
+*
  * not actual LEDS, used as GPIOs
  */
 
@@ -87,11 +87,12 @@
 #define LED_12_AFIO_REMAP ((void)0)
 
 
-/* configuration for aspirin - and more generaly IMUs *
+* configuration for aspirin - and more generaly IMUs *
 #define IMU_ACC_DRDY_RCC_GPIO         RCC_APB2Periph_GPIOB
 #define IMU_ACC_DRDY_GPIO             GPIOB
 #define IMU_ACC_DRDY_GPIO_PORTSOURCE  GPIO_PortSourceGPIOB
 
+*/
 
 
 #define DefaultVoltageOfAdc(adc) (0.0045*adc)
@@ -105,6 +106,7 @@
    ADC5 PC4/ADC14
    BATT PC5/ADC15
 */
+
 #define BOARD_ADC_CHANNEL_1 ADC_Channel_10
 #define BOARD_ADC_CHANNEL_2 ADC_Channel_11
 #define BOARD_ADC_CHANNEL_3 ADC_Channel_12

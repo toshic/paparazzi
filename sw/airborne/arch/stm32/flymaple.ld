@@ -1,6 +1,7 @@
 /*
  * $Id$
  *  
+ * Copyright (C) 2013 Anton Kortunov <toshic.toshic@gmail.com>
  * Copyright (C) 2010 Antoine Drouin <poinix@gmail.com>
  *
  * This file is part of Paparazzi.
